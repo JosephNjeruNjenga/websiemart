@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+#hero{
+    background-color: #D9D9D9;
+}
