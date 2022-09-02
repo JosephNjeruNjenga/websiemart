@@ -22,7 +22,7 @@ header #search {
   padding-left: 10px;
   color: gray;
 }
-.button {
+#search_button {
   border-radius: 15px;
   background: white;
   border: solid 3px gray;
@@ -75,5 +75,4 @@ img{
 }
 div#mother li{
   list-style: none;
-  display: inline-block;
 }

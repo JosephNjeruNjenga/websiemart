@@ -1,3 +1,4 @@
+// CATEGORY SECTION
 const div = document.getElementById("mother");
 const mensClothing = document.getElementById("mens_clothing");
 const womensClothing = document.getElementById("womens_clothing");
@@ -27,3 +28,16 @@ mensClothing.addEventListener("click", () => namee("men's clothing"));
 womensClothing.addEventListener("click", () => namee("women's clothing"));
 jewelery.addEventListener("click", () => namee("jewelery"));
 electronics.addEventListener("click", () => namee("electronics"));
+
+// SEARCH BAR
+function nameee(value) {
+  deleteChild()
+  const li = document.createElement("li");
+  li.innerHTML = `<p>Sorry, we couldn't find '<strong>${value}</strong>' in our database. Kindly use the category section as we plan to add more products. Thank you.</p>`
+  div.appendChild(li);
+}
+const searchBtn = document.querySelector("form");
+searchBtn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  nameee(e.target.search_bar.value);
+});
