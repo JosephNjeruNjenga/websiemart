@@ -69,4 +69,11 @@ div#main a:hover::after {
     display: block;
     background-color: gray;
   }
-  
+img{
+  width: 100px;
+  float: left;
+}
+div#mother li{
+  list-style: none;
+  display: inline-block;
+}
