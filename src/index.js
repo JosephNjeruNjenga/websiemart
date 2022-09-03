@@ -18,7 +18,7 @@ function namee(productCategory) {
       products.forEach((product) => {
         if (product.category === productCategory) {
           const li = document.createElement("li");
-          li.innerHTML = `<div class="col"><div class="card h-100"><img src="${product.image}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${product.title}</h5><p class="card-text">${product.description}</p></div><div class="card-footer"><small class="text-muted">$${product.price}</small></div></div></div>`;
+          li.innerHTML = `<div class="col"><div class="card h-100"><img src="${product.image}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${product.title}</h5><p class="card-text">${product.description}</p></div><div class="card-footer"><small class="text-muted">$${product.price}</small><button id="buy_button">Buy</button></div></div></div>`;
           div.appendChild(li);
         }
       });
@@ -33,11 +33,12 @@ electronics.addEventListener("click", () => namee("electronics"));
 function nameee(value) {
   deleteChild()
   const li = document.createElement("li");
-  li.innerHTML = `<p>Sorry, we couldn't find '<strong>${value}</strong>' in our database. Kindly use the category section as we plan to add more products. Thank you.</p>`
+  li.innerHTML = `<p>Sorry, we couldn't access our database for '<strong>${value}</strong>'. Kindly use the category section as we plan to add new features soon. Thank you.</p>`
   div.appendChild(li);
 }
-const searchBtn = document.querySelector("form");
-searchBtn.addEventListener("submit", (e) => {
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   nameee(e.target.search_bar.value);
+  form.reset()
 });
