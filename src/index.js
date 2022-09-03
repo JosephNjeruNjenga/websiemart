@@ -36,7 +36,7 @@ electronics.addEventListener("click", () => categoryDisplay("electronics"));
 function searchDisplay(value) {
   deleteChild();
   const li = document.createElement("li");
-  li.innerHTML = `<p>Sorry, we couldn't access our database for '<strong>${value}</strong>'. Kindly use the category section as we plan to add new features soon. Thank you.</p>`;
+  li.innerHTML = `<p>Sorry, we couldn't access our database for "<strong>${value}</strong>". Kindly use the category section as we plan to add new features soon. Thank you.</p>`;
   div.appendChild(li);
 }
 const form = document.querySelector("form");
