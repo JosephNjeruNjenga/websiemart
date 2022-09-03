@@ -33,7 +33,7 @@ jewelery.addEventListener("click", () => namee("jewelery"));
 electronics.addEventListener("click", () => namee("electronics"));
 
 // SEARCH BAR
-function nameee(value) {
+function searchDisplay(value) {
   deleteChild();
   const li = document.createElement("li");
   li.innerHTML = `<p>Sorry, we couldn't access our database for '<strong>${value}</strong>'. Kindly use the category section as we plan to add new features soon. Thank you.</p>`;
@@ -42,7 +42,7 @@ function nameee(value) {
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  nameee(e.target.search_bar.value);
+  searchDisplay(e.target.search_bar.value);
   form.reset();
 });
 
