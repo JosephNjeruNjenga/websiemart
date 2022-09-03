@@ -76,21 +76,28 @@ img{
 div#mother li{
   list-style: none;
 }
-#buy_button{
+.buy_button{
   float: right;
   border-radius: 15px;
   border: solid 2px gray;
-  color: gray;
+  color: black;
+  background-color: rgba(205, 205, 205, 0.6) ;
   width: 35%;
 }
 ul li small.text-muted{
   font-size: 17px;
 }
 #cart_button{
+  background-color: white;
   float: right;
   border-radius: 15px;
   border: solid 2px gray;
   color: black;
   width: 100px;
   margin: 10px 10px 0px 0px;
+}
+#cart_button:active, #search_button:active, .buy_button:active {
+  background-color: rgba(205, 205, 205, 0.6);
+  box-shadow: 0 1px #CDCDCD;
+  transform: translateY(1px);
 }
