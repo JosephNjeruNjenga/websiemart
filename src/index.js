@@ -12,7 +12,7 @@ function deleteChild() {
 }
 
 // CATEGORY SECTION
-function namee(productCategory) {
+function categoryDisplay(productCategory) {
   deleteChild();
   fetch("https://fakestoreapi.com/products")
     .then((resp) => resp.json())
@@ -27,10 +27,10 @@ function namee(productCategory) {
       });
     });
 }
-mensClothing.addEventListener("click", () => namee("men's clothing"));
-womensClothing.addEventListener("click", () => namee("women's clothing"));
-jewelery.addEventListener("click", () => namee("jewelery"));
-electronics.addEventListener("click", () => namee("electronics"));
+mensClothing.addEventListener("click", () => categoryDisplay("men's clothing"));
+womensClothing.addEventListener("click", () => categoryDisplay("women's clothing"));
+jewelery.addEventListener("click", () => categoryDisplay("jewelery"));
+electronics.addEventListener("click", () => categoryDisplay("electronics"));
 
 // SEARCH BAR
 function searchDisplay(value) {
