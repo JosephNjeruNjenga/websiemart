@@ -86,3 +86,11 @@ div#mother li{
 ul li small.text-muted{
   font-size: 17px;
 }
+#cart_button{
+  float: right;
+  border-radius: 15px;
+  border: solid 2px gray;
+  color: black;
+  width: 100px;
+  margin: 10px 10px 0px 0px;
+}
