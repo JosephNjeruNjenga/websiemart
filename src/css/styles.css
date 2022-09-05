@@ -101,18 +101,3 @@ ul li small.text-muted{
   box-shadow: 0 1px #CDCDCD;
   transform: translateY(1px);
 }
-.footer{
-  border-radius: 5px;
-  font-family: arial, san-serif;
-  font-size: 15px;
-  text-align: center;
-  color:black;
-  margin-bottom: 0px;
-}
-.list-footer li{
-  list-style: none;
-  display:inline;
-  width:200px;
-  padding: 5px;
-  margin:10px;
-}
