@@ -28,7 +28,7 @@ Go to the project directory
   cd websiemart/
 ```
 
-Launch Vs Code
+Launch Visual Studio Code
 
 ```bash
   code .

@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", homeDisplay);
+
 const div = document.getElementById("mother");
 const mensClothing = document.getElementById("mens_clothing");
 const womensClothing = document.getElementById("womens_clothing");
@@ -10,7 +12,13 @@ function deleteChild() {
     div.removeChild(div.firstChild);
   }
 }
-
+// HOMEPAGE
+function homeDisplay() {
+  deleteChild();
+  const li = document.createElement("li");
+  li.innerHTML = "<h6>Welcome to <strong>Websie.Mart</strong></h6><p><= Kindly use this category section</p>";
+  div.appendChild(li);
+}
 // CATEGORY SECTION
 function categoryDisplay(productCategory) {
   deleteChild();
@@ -28,7 +36,9 @@ function categoryDisplay(productCategory) {
     });
 }
 mensClothing.addEventListener("click", () => categoryDisplay("men's clothing"));
-womensClothing.addEventListener("click", () => categoryDisplay("women's clothing"));
+womensClothing.addEventListener("click", () =>
+  categoryDisplay("women's clothing")
+);
 jewelery.addEventListener("click", () => categoryDisplay("jewelery"));
 electronics.addEventListener("click", () => categoryDisplay("electronics"));
 
@@ -48,7 +58,7 @@ form.addEventListener("submit", (e) => {
 
 // CART BUTTON
 function cartDisplay() {
-  deleteChild()
+  deleteChild();
   const li = document.createElement("li");
   li.innerHTML = `<p>Sorry, we couldn't access our database for products saved in cart. Kindly use the category section as we plan to add new features soon. Thank you.</p>`;
   div.appendChild(li);
